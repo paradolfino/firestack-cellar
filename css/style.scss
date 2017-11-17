@@ -1,0 +1,216 @@
+//max
+$max-sm: "only screen and (max-width: 800px)";
+$max-med: "only screen and (max-width: 1300px)";
+
+//min
+$min-med: "only screen and (min-width: 800px)";
+$min-lg: "only screen and (min-height: 1600px)";
+$min-lg-hw: "only screen and (min-height: 1600px) and (min-width: 2400px)";
+
+body {
+  display: flex;
+  height: 100%;
+  min-height: 350px;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #0099ff;
+  transition: all 0.5s;
+  &:hover {
+    color: white;
+    transition: all 0.5s;
+  }
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #0099ff;
+    transition: all 0.5s;
+  }
+}
+
+#app {
+  height: 100vh; //app height
+  width: 100%;
+  min-height: 350px;
+  min-width: 300px;
+}
+
+#front,
+#add,
+#thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media #{$max-med} {
+    display: block;
+  }
+}
+
+#pageWrapper {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/59/Liquor_bottles_array.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  @media #{$max-med} {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media #{$max-sm} {
+    background: none;
+  }
+}
+
+#header,
+#footer {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  height: 100px;
+  color: white;
+  background-color: black;
+
+  #logo,
+  #nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media #{$max-sm} {
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+  @media #{$max-sm} {
+    grid-template-columns: 4fr;
+    grid-template-rows: 50px 50px;
+  }
+}
+#logo {
+  img {
+    margin-right: 10px;
+    height: auto;
+    width: 50px;
+  }
+  strong {
+    color: #0099ff;
+    text-shadow: 1px 1px #004d80;
+  }
+}
+
+#nav {
+  button {
+    &:focus {
+      color: white;
+      background-color: #0099ff;
+      outline: none;
+    }
+  }
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: -50px;
+  button {
+    height: 50px;
+  }
+}
+
+#theForm {
+  margin: 0 auto;
+  padding: 50px;
+  width: 70%;
+  box-shadow: 2px 2px 1.5px 1.5px gray;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media #{$max-sm} {
+    margin-top: 10%;
+  }
+  @media #{$min-med} {
+    margin-top: 10%;
+  }
+  @media only screen and (min-height: 1366px) and (min-width: 1024px) {
+    margin-top: 11%;
+  }
+  @media only screen and (max-height: 1600px) and (max-width: 2400px) {
+    margin-top: 15%;
+  }
+}
+
+.page {
+  margin: 50px auto;
+  min-height: 350px;
+  min-width: 300px;
+  height: 70%;
+  width: 50%;
+  background-color: white;
+  box-shadow: 2px 2px gray;
+  border-radius: 50px;
+  text-align: center;
+  transition: width 1s, height 1s;
+  @media #{$max-sm} {
+    width: 100%;
+    height: 1000px;
+    transition: width 1s, height 1s;
+  }
+}
+
+.card {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  transition: border 1s ease;
+  span {
+    max-height: 30px;
+    overflow-y: hidden;
+    text-overflow: "…";
+  }
+  img {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    float: left;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover {
+    position: relative;
+    border: 1px solid blue;
+    transition: border 1s, background-color 1s;
+  }
+}
+.pageElement {
+  margin: 25px auto;
+  width: 70%;
+  border: 1px solid #f2f2f2;
+}
+.formElement {
+  margin-top: 5px !important;
+  text-align: left !important;
+}

@@ -1,0 +1,265 @@
+@charset "UTF-8";
+body {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 350px;
+  min-width: 300px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #0099ff;
+  transition: all 0.5s;
+}
+
+a:hover {
+  color: white;
+  transition: all 0.5s;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #0099ff;
+  transition: all 0.5s;
+}
+
+#app {
+  height: 100vh;
+  width: 100%;
+  min-height: 350px;
+  min-width: 300px;
+}
+
+#front,
+#add,
+#thanks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  #front,
+  #add,
+  #thanks {
+    display: block;
+  }
+}
+
+#pageWrapper {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/59/Liquor_bottles_array.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1300px) {
+  #pageWrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #pageWrapper {
+    background: none;
+  }
+}
+
+#header,
+#footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr;
+  grid-template-columns: 2fr 2fr;
+  height: 100px;
+  color: white;
+  background-color: black;
+}
+
+#header #logo,
+#header #nav,
+#footer #logo,
+#footer #nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  #header #logo,
+  #header #nav,
+  #footer #logo,
+  #footer #nav {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #header,
+  #footer {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+    -ms-grid-rows: 50px 50px;
+    grid-template-rows: 50px 50px;
+  }
+}
+
+#logo img {
+  margin-right: 10px;
+  height: auto;
+  width: 50px;
+}
+
+#logo strong {
+  color: #0099ff;
+  text-shadow: 1px 1px #004d80;
+}
+
+#nav button:focus {
+  color: white;
+  background-color: #0099ff;
+  outline: none;
+}
+
+#pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: -50px;
+}
+
+#pagination button {
+  height: 50px;
+}
+
+#theForm {
+  margin: 0 auto;
+  padding: 50px;
+  width: 70%;
+  box-shadow: 2px 2px 1.5px 1.5px gray;
+}
+
+#footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  #footer {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #footer {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-height: 1366px) and (min-width: 1024px) {
+  #footer {
+    margin-top: 11%;
+  }
+}
+
+@media only screen and (max-height: 1600px) and (max-width: 2400px) {
+  #footer {
+    margin-top: 15%;
+  }
+}
+
+.page {
+  margin: 50px auto;
+  min-height: 350px;
+  min-width: 300px;
+  height: 70%;
+  width: 50%;
+  background-color: white;
+  box-shadow: 2px 2px gray;
+  border-radius: 50px;
+  text-align: center;
+  transition: width 1s, height 1s;
+}
+
+@media only screen and (max-width: 800px) {
+  .page {
+    width: 100%;
+    height: 1000px;
+    transition: width 1s, height 1s;
+  }
+}
+
+.card {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  transition: border 1s ease;
+}
+
+.card span {
+  max-height: 30px;
+  overflow-y: hidden;
+  text-overflow: "…";
+}
+
+.card img {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  float: left;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card:hover {
+  position: relative;
+  border: 1px solid blue;
+  transition: border 1s, background-color 1s;
+}
+
+.pageElement {
+  margin: 25px auto;
+  width: 70%;
+  border: 1px solid #f2f2f2;
+}
+
+.formElement {
+  margin-top: 5px !important;
+  text-align: left !important;
+}
